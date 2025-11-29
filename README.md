@@ -17,3 +17,54 @@ If you are developing a production application, we recommend using TypeScript wi
 
 
 "# todo-list-app" 
+# React To-Do List Application
+
+A modern, responsive To-Do List application built with React and Vite. This application allows users to manage their tasks efficiently with features like adding, editing, deleting, and marking tasks as completed.
+
+![React](https://img.shields.io/badge/React-18.2.0-blue)
+![Vite](https://img.shields.io/badge/Vite-5.3.1-purple)
+![License](https://img.shields.io/badge/License-MIT-green)
+
+## ✨ Features
+
+-  **Add new tasks** - Quickly add tasks to your list
+-  **Mark as completed** - Check off completed tasks
+-  **Edit tasks** - Modify existing tasks inline
+-  **Delete tasks** - Remove tasks you no longer need
+-  **Responsive design** - Works perfectly on all devices
+-  **Modern UI** - Clean and user-friendly interface
+-  **Local state management** - No backend required
+
+##  Live Demo
+
+[Add your GitHub Pages or Vercel link here after deployment]
+
+## 📸 Screenshots
+
+[Add screenshots of your application here]
+
+## 🛠️ Technologies Used
+
+- **Frontend Framework**: React 18
+- **Build Tool**: Vite
+- **Styling**: CSS3 with Flexbox/Grid
+- **Version Control**: Git & GitHub
+- **Package Manager**: npm
+
+## 📋 Prerequisites
+
+Before running this project, make sure you have the following installed:
+
+- **Node.js** (version 14 or higher)
+- **npm** (usually comes with Node.js)
+- **Git** (for version control)
+
+## ⚡ Installation & Setup
+
+Follow these steps to get the project running on your local machine:
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/your-username/todo-list-app.git
+cd todo-list-app
