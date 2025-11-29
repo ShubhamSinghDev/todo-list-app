@@ -25,7 +25,7 @@ A modern, responsive To-Do List application built with React and Vite. This appl
 ![Vite](https://img.shields.io/badge/Vite-5.3.1-purple)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
-## ✨ Features
+##  Features
 
 -  **Add new tasks** - Quickly add tasks to your list
 -  **Mark as completed** - Check off completed tasks
@@ -39,11 +39,11 @@ A modern, responsive To-Do List application built with React and Vite. This appl
 
 [Add your GitHub Pages or Vercel link here after deployment]
 
-## 📸 Screenshots
+##  Screenshots
 
 [Add screenshots of your application here]
 
-## 🛠️ Technologies Used
+##  Technologies Used
 
 - **Frontend Framework**: React 18
 - **Build Tool**: Vite
@@ -51,7 +51,7 @@ A modern, responsive To-Do List application built with React and Vite. This appl
 - **Version Control**: Git & GitHub
 - **Package Manager**: npm
 
-## 📋 Prerequisites
+##  Prerequisites
 
 Before running this project, make sure you have the following installed:
 
@@ -59,7 +59,7 @@ Before running this project, make sure you have the following installed:
 - **npm** (usually comes with Node.js)
 - **Git** (for version control)
 
-## ⚡ Installation & Setup
+##  Installation & Setup
 
 Follow these steps to get the project running on your local machine:
 
@@ -68,3 +68,13 @@ Follow these steps to get the project running on your local machine:
 ```bash
 git clone https://github.com/your-username/todo-list-app.git
 cd todo-list-app
+
+## Key Highlights for Running Instructions:
+
+### **Clear Step-by-Step:**
+```bash
+1. git clone https://github.com/your-username/todo-list-app.git
+2. cd todo-list-app
+3. npm install
+4. npm run dev
+5. Open http://localhost:5173
