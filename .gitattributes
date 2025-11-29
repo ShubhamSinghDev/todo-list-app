@@ -1,0 +1,12 @@
+* text=auto 
+*.js text 
+*.jsx text 
+*.css text 
+*.html text 
+*.json text 
+*.md text 
+*.config.js text 
+*.bat text eol=crlf 
+*.png binary 
+*.jpg binary 
+*.svg binary 

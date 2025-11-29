@@ -1,0 +1,473 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #667eea;
+  --primary-dark: #5a6fd8;
+  --secondary-color: #764ba2;
+  --text-color: #333;
+  --text-light: #6c757d;
+  --background: #ffffff;
+  --background-alt: #f8f9fa;
+  --border-color: #e1e5e9;
+  --success: #28a745;
+  --warning: #ffc107;
+  --danger: #dc3545;
+  --gray: #6c757d;
+  --shadow: 0 10px 30px rgba(0,0,0,0.2);
+  --shadow-light: 0 2px 5px rgba(0,0,0,0.1);
+  --border-radius: 12px;
+  --transition: all 0.3s ease;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  min-height: 100vh;
+  padding: 16px;
+  line-height: 1.6;
+}
+
+.App {
+  max-width: 800px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Header Styles */
+.header {
+  text-align: center;
+  margin-bottom: 24px;
+  color: white;
+  padding: 0 12px;
+}
+
+.header h1 {
+  font-size: clamp(2rem, 5vw, 2.5rem);
+  margin-bottom: 8px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  font-weight: 700;
+}
+
+.header p {
+  font-size: clamp(1rem, 3vw, 1.1rem);
+  opacity: 0.9;
+  font-weight: 300;
+}
+
+/* Main Container */
+.todo-container {
+  background: var(--background);
+  border-radius: var(--border-radius);
+  padding: clamp(20px, 4vw, 30px);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(10px);
+}
+
+/* Input Section */
+.input-section {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.todo-input {
+  flex: 1 1 300px;
+  min-width: 250px;
+  padding: 14px 16px;
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 16px;
+  transition: var(--transition);
+  background: var(--background);
+}
+
+.todo-input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.add-btn {
+  padding: 14px 24px;
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: var(--transition);
+  flex: 0 0 auto;
+  min-width: 120px;
+}
+
+.add-btn:hover {
+  background: var(--primary-dark);
+  transform: translateY(-1px);
+}
+
+.add-btn:active {
+  transform: translateY(0);
+}
+
+/* Todo List */
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.empty-message {
+  text-align: center;
+  color: var(--text-light);
+  font-style: italic;
+  padding: 40px 20px;
+  font-size: clamp(1rem, 3vw, 1.1rem);
+}
+
+/* Todo Item */
+.todo-item {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background: var(--background-alt);
+  transition: var(--transition);
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.todo-item:hover {
+  box-shadow: var(--shadow-light);
+  transform: translateY(-1px);
+}
+
+.todo-item.completed {
+  opacity: 0.7;
+  background: #e9ecef;
+}
+
+.checkbox {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: var(--primary-color);
+  flex-shrink: 0;
+}
+
+.todo-text {
+  flex: 1;
+  font-size: 16px;
+  min-width: 150px;
+  word-break: break-word;
+  padding: 4px 0;
+}
+
+.todo-item.completed .todo-text {
+  text-decoration: line-through;
+  color: var(--text-light);
+}
+
+.edit-input {
+  flex: 1;
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  min-width: 150px;
+  background: white;
+}
+
+/* Todo Actions */
+.todo-actions {
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+}
+
+.edit-btn, .delete-btn, .save-btn, .cancel-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: var(--transition);
+  min-width: 60px;
+}
+
+.edit-btn {
+  background: var(--warning);
+  color: #212529;
+}
+
+.edit-btn:hover {
+  background: #e0a800;
+  transform: translateY(-1px);
+}
+
+.delete-btn {
+  background: var(--danger);
+  color: white;
+}
+
+.delete-btn:hover {
+  background: #c82333;
+  transform: translateY(-1px);
+}
+
+.save-btn {
+  background: var(--success);
+  color: white;
+}
+
+.save-btn:hover {
+  background: #218838;
+  transform: translateY(-1px);
+}
+
+.cancel-btn {
+  background: var(--gray);
+  color: white;
+}
+
+.cancel-btn:hover {
+  background: #5a6268;
+  transform: translateY(-1px);
+}
+
+/* Mobile First Media Queries */
+
+/* Tablets and larger phones */
+@media (max-width: 768px) {
+  body {
+    padding: 12px;
+  }
+
+  .todo-container {
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  .input-section {
+    gap: 10px;
+  }
+
+  .todo-input {
+    flex: 1 1 100%;
+    min-width: auto;
+    padding: 12px 14px;
+  }
+
+  .add-btn {
+    flex: 1 1 100%;
+    min-width: auto;
+    padding: 12px;
+  }
+
+  .todo-item {
+    padding: 14px;
+    gap: 10px;
+  }
+
+  .todo-text {
+    min-width: 120px;
+    font-size: 15px;
+  }
+
+  .edit-input {
+    min-width: 120px;
+    font-size: 15px;
+  }
+
+  .todo-actions {
+    width: 100%;
+    justify-content: flex-end;
+    margin-top: 8px;
+  }
+
+  .edit-btn, .delete-btn, .save-btn, .cancel-btn {
+    flex: 1;
+    min-width: 70px;
+    padding: 10px 12px;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  body {
+    padding: 8px;
+  }
+
+  .header {
+    margin-bottom: 20px;
+  }
+
+  .header h1 {
+    font-size: 1.75rem;
+  }
+
+  .todo-container {
+    padding: 16px;
+    border-radius: 8px;
+  }
+
+  .input-section {
+    margin-bottom: 20px;
+  }
+
+  .todo-input {
+    padding: 12px;
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+
+  .todo-item {
+    padding: 12px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .todo-content {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .todo-text {
+    min-width: auto;
+    flex: 1;
+  }
+
+  .edit-input {
+    min-width: auto;
+    width: 100%;
+    margin: 4px 0;
+  }
+
+  .todo-actions {
+    width: 100%;
+    justify-content: stretch;
+    gap: 6px;
+  }
+
+  .edit-btn, .delete-btn, .save-btn, .cancel-btn {
+    flex: 1;
+    padding: 10px;
+    font-size: 13px;
+    min-width: auto;
+  }
+
+  .empty-message {
+    padding: 30px 16px;
+    font-size: 1rem;
+  }
+}
+
+/* Very small phones (iPhone SE, etc.) */
+@media (max-width: 320px) {
+  .header h1 {
+    font-size: 1.5rem;
+  }
+
+  .todo-container {
+    padding: 12px;
+  }
+
+  .todo-actions {
+    flex-direction: column;
+  }
+
+  .edit-btn, .delete-btn, .save-btn, .cancel-btn {
+    width: 100%;
+  }
+}
+
+/* Large screens */
+@media (min-width: 1200px) {
+  .App {
+    max-width: 900px;
+  }
+
+  .todo-container {
+    padding: 40px;
+  }
+}
+
+/* High DPI screens */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .todo-item {
+    border-width: 0.5px;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text-color: #ffffff;
+    --text-light: #a0a0a0;
+    --background: #1a1a1a;
+    --background-alt: #2d2d2d;
+    --border-color: #404040;
+  }
+
+  .todo-container {
+    background: var(--background);
+    color: var(--text-color);
+  }
+
+  .todo-item {
+    background: var(--background-alt);
+    border-color: var(--border-color);
+  }
+
+  .todo-input {
+    background: var(--background-alt);
+    color: var(--text-color);
+    border-color: var(--border-color);
+  }
+
+  .edit-input {
+    background: var(--background-alt);
+    color: var(--text-color);
+    border-color: var(--border-color);
+  }
+}
+
+/* Reduced motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+
+  .todo-item:hover {
+    transform: none;
+  }
+}
+
+/* Touch device improvements */
+@media (hover: none) and (pointer: coarse) {
+  .edit-btn, .delete-btn, .save-btn, .cancel-btn, .add-btn {
+    padding: 12px 16px;
+    min-height: 44px; /* Better touch targets */
+  }
+
+  .checkbox {
+    width: 24px;
+    height: 24px;
+  }
+
+  .todo-item:hover {
+    transform: none;
+    box-shadow: none;
+  }
+}
