@@ -35,13 +35,9 @@ A modern, responsive To-Do List application built with React and Vite. This appl
 -  **Modern UI** - Clean and user-friendly interface
 -  **Local state management** - No backend required
 
-##  Live Demo
 
-[Add your GitHub Pages or Vercel link here after deployment]
 
-##  Screenshots
 
-[Add screenshots of your application here]
 
 ##  Technologies Used
 
